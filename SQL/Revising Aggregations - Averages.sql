@@ -9,7 +9,7 @@ WHERE District = 'California'
 
 /*
 Returns the Average Population as a Float with 3 decimal places to match the
-correct answe
+correct answer
 */
 
 SELECT CAST(AVG(CAST(Population AS Numeric (10,2))) AS Numeric (10,3))
