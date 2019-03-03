@@ -9,3 +9,12 @@ SELECT CONVERT(
                     )
                 )
 FROM Employees;
+
+/* 
+Shorter solution using CAST over CONVERT
+*/
+SELECT CEILING(
+    AVG(CAST(Salary AS decimal)) - 
+             AVG(CAST(REPLACE(Salary,'0','') AS decimal))
+                )
+FROM Employees;
